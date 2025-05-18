@@ -3,26 +3,26 @@ pipeline {
     stages {
         stage('checkout scm'){
             steps {
-                echo "checking out from branch ${env.BRANCH NAME}"
+                echo "checking out from branch ${env.BRANCH_NAME}"
                 checkout scm
             }
         }
         stage('Build') {
             steps {
                 echo 'Building the project'
-                mvn clean package
+                // mvn clean package
             }
         }
         stage('Deploy') {
             steps {
                 script {
-                    if (env.BRANCH NAME == 'dev'){
+                    if (env.BRANCH_NAME == 'dev'){
                         echo 'Deploying to dev env..'
                         // sh 'deploy-dev.sh'
-                    } else if (env.BRANCH NAME == 'qa'){
+                    } else if (env.BRANCH_NAME == 'qa'){
                         echo 'Deploying to qa env..'
                         // sh 'deploy-qa.sh'
-                    } else if (env.BRANCH NAME == 'master'){
+                    } else if (env.BRANCH_NAME == 'master'){
                         echo 'Deploying to prod env..'
                         // sh 'deploy-prod.sh'
                     } else {
