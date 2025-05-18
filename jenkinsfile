@@ -17,7 +17,7 @@ pipeline {
                 script {
                     if (env.BRANCH_NAME == 'dev'){
                         echo 'Deploying to dev env..'
-                        // sh 'deploy-dev.sh'
+                        sh 'deploy-dev.sh'
                     } else if (env.BRANCH_NAME == 'qa'){
                         echo 'Deploying to qa env..'
                         // sh 'deploy-qa.sh'
