@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('checkout scm'){
             steps {
-                echo "checking out from branch ${env.BRANCH NAME}"
+                echo "checking out from branch ${env.BRANCH_NAME}"
                 checkout scm
             }
         }
