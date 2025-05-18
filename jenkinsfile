@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    if (env.BRANCH NAME == 'dev'){
+                    if (env.BRANCH_NAME == 'dev'){
                         echo 'Deploying to dev env..'
                         // sh 'deploy-dev.sh'
                     } else if (env.BRANCH NAME == 'qa'){
