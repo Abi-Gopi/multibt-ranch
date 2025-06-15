@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../multibranch/multibt-ranch"
+		},
+		{
+			"path": "../terraform"
+		},
+		{
+			"path": "../sample_ec2"
+		}
+	],
+	"settings": {}
+}
